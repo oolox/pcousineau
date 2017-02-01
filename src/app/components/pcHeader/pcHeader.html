@@ -1,0 +1,48 @@
+  <md-toolbar  ng-controller="HeaderController as vm" id="pcHeader">
+    <div class="md-toolbar-tools" layout="row" layout-align="space-between center" layout-fill >
+      <div>
+        Paul Cousineau
+      </div>
+      <span flex></span>
+
+      <!--<i class="zmdi zmdi-more-vert"></i>-->
+      <md-menu>
+        <div class="pcMenuButton">
+          <md-button aria-label="Open More" class="md-icon-button" ng-click="vm.openMenu($mdOpenMenu, $event)">
+            <i class="zmdi zmdi-more-vert"></i>
+          </md-button>
+        </div>
+        <md-menu-content width="3">
+          <md-menu-item>
+            <md-button ng-click="vm.selectEmail($event)">
+              <i class="zmdi zmdi-email"></i> &nbsp;
+              Email
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="vm.selectLinkedin($event)">
+              <i class="zmdi zmdi-linkedin-box"></i> &nbsp;
+              LinkedIn
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="vm.selectResume($event)">
+              <i class="zmdi zmdi-collection-text"></i> &nbsp;
+              Resume
+            </md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button ng-click="vm.selectGitHub($event)">
+              <i class="zmdi zmdi-github-alt"></i> &nbsp;
+              GitHub
+            </md-button>
+          </md-menu-item>
+
+
+
+
+
+        </md-menu-content>
+      </md-menu>
+    </div>
+  </md-toolbar>
