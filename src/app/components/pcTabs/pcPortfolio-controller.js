@@ -7,10 +7,8 @@
 
   /** @ngInject */
   function PortfolioController($log,PortfolioService,$mdDialog) {
-
     var vm=this;
     vm.slides=PortfolioService.getSlides();
-
 
     vm.showSlide = function(ev,slide) {
       $log.log(angular.toJson(slide));
@@ -25,24 +23,11 @@
           }
         });
     };
-
   }
 
   function DialogController($scope, $mdDialog,slide) {
 
     $scope.slide=slide;
-
-    $scope.hide = function() {
-      $mdDialog.hide();
-    };
-
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-
-    $scope.answer = function(answer) {
-      $mdDialog.hide(answer);
-    };
   }
 
 })();

@@ -6,11 +6,12 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider) {
+  function config($logProvider,$mdThemingProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
-
-
+    $mdThemingProvider.theme('default')
+      .primaryPalette('indigo')
+      .accentPalette('red');
 
   }
 
