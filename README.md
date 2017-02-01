@@ -6,7 +6,8 @@
   <br>
    Technologies used in building this project...<br>
   <ul>
-    <li>Javascript<li>
+    <li>Javascript</li>
     <li>Angular with Angular Material</li>
+    <li>CSS / Sass</li>
     <li>Yeoman, Bower, NPM, GULP</li>
   <ul>
