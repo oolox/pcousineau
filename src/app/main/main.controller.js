@@ -14,7 +14,7 @@
     vm.options = {
       chart: {
         type: 'discreteBarChart',
-        height: 350,
+        height: 400,
         margin : {
           top: 20,
           right: 20,
@@ -44,35 +44,23 @@
         values: [
           {
             "label" : "A" ,
-            "value" : -29.765957771107
+            "value" : 5
           } ,
           {
             "label" : "B" ,
-            "value" : 0
+            "value" : 10
           } ,
           {
             "label" : "C" ,
-            "value" : 32.807804682612
+            "value" : 15
           } ,
           {
             "label" : "D" ,
-            "value" : 196.45946739256
+            "value" : 20
           } ,
           {
             "label" : "E" ,
-            "value" : 0.19434030906893
-          } ,
-          {
-            "label" : "F" ,
-            "value" : -98.079782601442
-          } ,
-          {
-            "label" : "G" ,
-            "value" : -13.925743130903
-          } ,
-          {
-            "label" : "H" ,
-            "value" : -5.1387322875705
+            "value" : 25
           }
         ]
       }

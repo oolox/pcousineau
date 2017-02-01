@@ -6,7 +6,7 @@
     .controller('HeaderController', HeaderController);
 
   /** @ngInject */
-  function HeaderController($scope, $log, $mdDialog) {
+  function HeaderController($scope, $log, $mdDialog, $window) {
 
     var vm=this;
     vm.isOpen=false;
@@ -24,13 +24,12 @@
 
     vm.selectEmail=function(ev) {
 
-      var confirm = $mdDialog.confirm()
+      var confirm = $mdDialog.alert()
         .title('Email')
         .textContent('oolotronic@hotmail.com')
         .ariaLabel('oolotronic@hotmail.com')
         .targetEvent(ev)
-        .ok('Email Now')
-        .cancel('Ok');
+        .ok('Close');
 
       $mdDialog.show(confirm).then(function() {
         // IF email now
@@ -51,11 +50,53 @@
         .cancel('Cancel');
 
       $mdDialog.show(confirm).then(function() {
-        // IF email now
+        $log.log("Linkedin");
+        $window.open("https://www.linkedin.com/in/paul-cousineau-b3319461/", "_blank")
+
       }, function() {
-        // IF ok
+        $log.log("CANCEL");
+
+      });
+    };
+
+    vm.selectGitHub=function(ev) {
+      var confirm = $mdDialog.confirm()
+        .title('Linked In')
+        .textContent('This will open Github in a new tab.')
+        .ariaLabel('Pauls github')
+        .targetEvent(ev)
+        .ok('Open Github')
+        .cancel('Cancel');
+
+      $mdDialog.show(confirm).then(function() {
+        $log.log("Github");
+        $window.open("https://github.com/oolox/pcousineau", "_blank")
+
+      }, function() {
+        $log.log("CANCEL");
+
+      });
+    };
+
+    vm.selectResume=function(ev) {
+      var confirm = $mdDialog.confirm()
+        .title('Resume')
+        .textContent("This will open Paul's resume in a new tab.")
+        .ariaLabel('Pauls resume')
+        .targetEvent(ev)
+        .ok('View')
+        .cancel('Cancel');
+
+      $mdDialog.show(confirm).then(function() {
+        $log.log("OPEN");
+        $window.open("assets/pcousineauResume.pdf", "_blank")
+
+      }, function() {
+        $log.log("CANCEL");
+
       });
     };
 
   }
+
 })();
