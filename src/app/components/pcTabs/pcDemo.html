@@ -1,0 +1,29 @@
+<div layout="row">
+  <div flex="30">
+    <div layout="row" ng-repeat="val in vm.data[0].values">
+      <div>
+        <md-input-container>
+          <label>Series</label>
+          <input ng-model="val.label">
+        </md-input-container>
+      </div>
+      <div>
+        <md-input-container>
+          <label>Value</label>
+          <input ng-model="val.value" type="number" max="200" min="0">
+        </md-input-container>
+      </div>
+
+    </div>
+  </div>
+  <div flex="70">
+    <h2>
+      This is a simple demo of an nvd3 chart bound to angular variables.
+    </h2>
+    <p class="md-caption">
+      Edit values on left.
+    </p>
+    <nvd3 options="vm.options" data="vm.data" class="with-3d-shadow with-transitions"></nvd3>
+
+  </div>
+</div>
