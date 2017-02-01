@@ -64,6 +64,14 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+
+
 #pcHeader
 {
   .pcMenuButton

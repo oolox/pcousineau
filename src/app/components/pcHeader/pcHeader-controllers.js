@@ -57,10 +57,5 @@
       });
     };
 
-    //$scope.testBind="BOUND";
-    $log.log("<HeaderController> "+$scope.testBind);
-
-
-
   }
 })();
