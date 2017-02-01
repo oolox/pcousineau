@@ -1,0 +1,25 @@
+#pcInfo
+{
+  .infoName
+  {
+    width:125px;
+    min-width: 125px;
+  }
+
+
+  /* visited link */
+  a:visited {
+    color: #808080;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: black;
+  }
+
+  /* selected link */
+  a:active {
+    color: #C0C0C0;
+  }
+
+}
