@@ -1,9 +1,11 @@
 <md-content layout-padding ng-controller="PortfolioController as vm" id="pcPortfolio" layout="column">
   <div>
-      All interfaces and products are or have been functional, deployed and used by end users and are provided to represent some examples of my past work.
+    <p>
+      All images are from products I have developed; that are or have been functional, deployed and used by end users.
+    </p>
+
   </div>
   <div layout="column">
-
     <div ng-repeat="slide in vm.slides" layout="row" layout-padding layout-align="start center" class="slide" ng-click="vm.showSlide($event,slide);">
         <img ng-src="{{slide.path}}" class="thumbnailImg"/>
         <div>{{slide.name}} ({{slide.year}})</div>

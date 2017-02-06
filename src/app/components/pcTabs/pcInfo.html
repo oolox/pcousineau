@@ -1,45 +1,58 @@
-<div  id="pcInfo">
+<div  id="pcInfo" ng-controller="InfoController as vm">
 
-  <div layout-align="start center" layout="row" layout-padding>
-    <div>
-      <i class="zmdi zmdi-email zmdi-hc-2x"></i>
-    </div>
-    <div class="infoName">
-      Email
-    </div>
-    <div>
-      oolotronic@hotmail.com
+  <div layout="row" layout-align="start center">
+    <md-button layout-align="start center" layout="row" class="infoBt"  ng-click='vm.launchLink("mailto:oolotronic@hotmail.com")'>
+    <i class="zmdi zmdi-email zmdi-hc-2x"></i>
+    &nbsp;
+    Email
+  </md-button>
+    <div class="lowercase">
+
+      <a href="mailto:oolotronic@hotmail.com?Subject=FromWebsite" target="_blank" >
+        mailto:oolotronic@hotmail.com
+      </a>
+
     </div>
   </div>
 
-  <div layout-align="start center" layout="row"  layout-padding>
-    <div>
+
+  <div layout="row" layout-align="start center">
+    <md-button layout-align="start center" layout="row" class="infoBt" ng-click='vm.launchLink("https://www.linkedin.com/in/paul-cousineau-b3319461")'>
       <i class="zmdi zmdi-linkedin-box zmdi-hc-2x"></i>
+      &nbsp;
+      Linkedin
+    </md-button>
+    <div class="lowercase">
+      <a href="https://www.linkedin.com/in/paul-cousineau-b3319461" target="_blank">
+        www.linkedin.com/in/paul-cousineau-b3319461
+      </a>
     </div>
-    <div class="infoName">Linkedin</div>
-    <a href="https://www.linkedin.com/in/paul-cousineau-b3319461" target="_blank">
-      https://www.linkedin.com/in/paul-cousineau-b3319461
-    </a>
   </div>
 
-  <div layout-align="start center" layout="row"  layout-padding>
-    <div>
+  <div layout="row" layout-align="start center">
+    <md-button layout-align="start center" layout="row" class="infoBt" ng-click='vm.launchLink("https://github.com/oolox/pcousineau")'>
       <i class="zmdi zmdi-github zmdi-hc-2x"></i>
+      &nbsp;
+      Git Hub
+    </md-button>
+    <div class="lowercase">
+      <a href="https://www.linkedin.com/in/paul-cousineau-b3319461" target="_blank">
+        github.com/oolox/pcousineau
+      </a>
     </div>
-    <div class="infoName">Git Hub</div>
-    <a href="https://github.com/oolox/pcousineau" target="_blank">
-      https://github.com/oolox/pcousineau
-    </a>
   </div>
 
-  <div layout-align="start center" layout="row"  layout-padding>
-    <div>
+  <div layout="row" layout-align="start center">
+    <md-button layout-align="start center" layout="row" class="infoBt" ng-click='vm.launchLink("assets/pcousineauResume.pdf")'>
       <i class="zmdi zmdi-collection-text zmdi-hc-2x"></i>
+      &nbsp;
+      Resume
+    </md-button>
+    <div class="lowercase">
+      <a href="assets/pcousineauResume.pdf" target="_blank">
+        pcousineauResume.pdf
+      </a>
     </div>
-    <div class="infoName">Resume</div>
-    <a href="assets/pcousineauResume.pdf" target="_blank">
-      pcousineauResume.pdf
-    </a>
   </div>
 
 </div>
